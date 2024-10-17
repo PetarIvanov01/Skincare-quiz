@@ -1,14 +1,102 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "Grange";
+  src: url("fonts/fonnts.com-Grange_Light_Extended.otf") format("opentype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("fonts/fonnts.com-Proxima_Nova_Alt_Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url("fonts/fonnts.com-Proxima_Nova_Thin.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: white;
+  height: 100%;
+  font-family: Grange, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  color: white;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+body {
+  overflow-x: hidden;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Base styles (for mobile devices by default) */
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* For tablets (min-width: 600px) */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+/* For small desktops (min-width: 768px) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* For medium desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* For large desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
