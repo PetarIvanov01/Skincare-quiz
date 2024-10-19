@@ -1,9 +1,9 @@
 import Route from "./lib/Route";
 
-import HomePage from "./components/Home/Home";
-import StartQuiz from "./components/Quiz/StartQuiz";
-import CheckQuizCompletion from "./components/Quiz/FinishQuiz";
-import NotFound from "./components/NotFound";
+import HomePage from "@/pages/Home/Home";
+import StartQuiz from "@/components/Quiz/StartQuiz";
+import CheckQuizCompletion from "@/components/Quiz/FinishQuiz";
+import NotFound from "@/components/NotFound";
 
 export default function Router() {
   return (
