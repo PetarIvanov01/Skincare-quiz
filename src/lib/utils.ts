@@ -1,4 +1,5 @@
-// Optimize: Add path caching with Map
+// Can be Optimized: Path caching with Map
+
 function parsePath(path: string) {
   const paramNames: string[] = [];
   const normalizedPath = path.replace(/:(\w+)/g, (_, paramName) => {

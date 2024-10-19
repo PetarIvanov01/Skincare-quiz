@@ -1,6 +1,8 @@
 import React from "react";
-import { usePath } from "../hooks/usePath";
+
 import { matchPath } from "./utils";
+
+import { usePath } from "@/hooks/usePath";
 
 type ComponentProps = Readonly<{
   params: { [key: string]: string };

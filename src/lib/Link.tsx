@@ -5,6 +5,7 @@ type Props = Readonly<
     replace?: boolean;
   } & React.AnchorHTMLAttributes<HTMLAnchorElement>
 >;
+
 export default function Link(props: Props) {
   const { children, to, replace, onClick, ...rest } = props;
 
