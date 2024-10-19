@@ -1,0 +1,71 @@
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.bg-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 540px;
+  background-image: url("/src/assets/images/completion-page-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.55);
+  background-blend-mode: overlay;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  max-width: 583px;
+  min-height: 330px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  gap: 2em;
+
+  & h1 {
+    font-family: inherit;
+    color: white;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  & p {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    max-width: 563px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+.button {
+  font-family: "Proxima Nova";
+  font-size: medium;
+  font-weight: 500;
+  border: 1px solid #ffffff;
+  background: transparent;
+  border-radius: 8px;
+
+  color: white;
+  line-height: 19.5px;
+  text-align: center;
+  width: 238px;
+  height: 47px;
+  padding: 14px 40px 14px 40px;
+}
