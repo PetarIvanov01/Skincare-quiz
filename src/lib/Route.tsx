@@ -14,6 +14,7 @@ type Props = Readonly<{
 
 export default function Route(props: Props) {
   const { path, component: Component, exact } = props;
+
   const currentPath = usePath();
 
   const { matched, params } = matchPath(currentPath, { path, exact });
