@@ -18,7 +18,7 @@ export default function useFetch<T>(
   const [isLoading, setLoading] = useState(false);
   const [options, setOptions] = useState(initOptions);
 
-  // Handle request canceling
+  // Can be Optimized: Handle request canceling
   const init = useCallback(async () => {
     setLoading(true);
     try {
