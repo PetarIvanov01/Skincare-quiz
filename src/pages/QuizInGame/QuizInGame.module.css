@@ -1,0 +1,97 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8em;
+}
+
+.questionText {
+  font-family: "Grange";
+  font-weight: 100;
+  color: #1c2635;
+
+  max-width: 583px;
+  text-align: center;
+  padding: 0 0.4em;
+  line-height: 110%;
+}
+
+.optionsContainer {
+  display: flex;
+  max-width: 1000px;
+  gap: 0.7em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.option {
+  min-width: 189px;
+
+  font-family: "Proxima Nova";
+  text-wrap: nowrap;
+  text-align: start;
+  padding: 10px 30px 10px 15px;
+
+  border: 1px solid #5bc1ed;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #5bc1ed;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 1.25em;
+  justify-content: space-between;
+}
+
+.backButton,
+.nextButton {
+  font-family: "Proxima Nova";
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+}
+
+.backButton {
+  color: #677487;
+  text-decoration: underline;
+  background-color: white;
+}
+
+.nextButton {
+  padding: 12px 28px;
+  color: #1c2635;
+  background-color: #c3edff;
+
+  &:hover {
+    background-color: #5bc1ed;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.option-selected {
+  background-color: #5bc1ed;
+}
