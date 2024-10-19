@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import Link from "../../lib/Link";
 import styles from "./Home.module.css";
 
 export default function HomePage() {
+  useEffect(() => {
+    sessionStorage.setItem("quizAnswers", "{}");
+  }, []);
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
