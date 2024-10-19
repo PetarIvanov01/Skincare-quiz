@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Grange";
-  src: url("fonts/fonnts.com-Grange_Light_Extended.otf") format("opentype");
+  src: url("/fonts/fonnts.com-Grange_Light_Extended.otf") format("opentype");
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("fonts/fonnts.com-Proxima_Nova_Alt_Regular.ttf") format("truetype");
+  src: url("/fonts/fonnts.com-Proxima_Nova_Alt_Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova Thin";
-  src: url("fonts/fonnts.com-Proxima_Nova_Thin.otf") format("opentype");
+  src: url("/fonts/fonnts.com-Proxima_Nova_Thin.otf") format("opentype");
 }
 
 * {
@@ -45,9 +45,10 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
-/* Base styles (for mobile devices by default) */
 h1 {
   font-size: 30px;
 }
@@ -57,7 +58,6 @@ p {
   line-height: 1.5;
 }
 
-/* For tablets (min-width: 600px) */
 @media (min-width: 600px) {
   h1 {
     font-size: 34px;
@@ -68,7 +68,6 @@ p {
   }
 }
 
-/* For small desktops (min-width: 768px) */
 @media (min-width: 768px) {
   h1 {
     font-size: 36px;
@@ -79,7 +78,6 @@ p {
   }
 }
 
-/* For medium desktops (min-width: 1024px) */
 @media (min-width: 1024px) {
   h1 {
     font-size: 38px;
@@ -90,7 +88,6 @@ p {
   }
 }
 
-/* For large desktops (min-width: 1440px) */
 @media (min-width: 1440px) {
   h1 {
     font-size: 40px;
