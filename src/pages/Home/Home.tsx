@@ -1,10 +1,14 @@
-import { useEffect } from "react";
-import Link from "../../lib/Link";
 import styles from "./Home.module.css";
+import { SESSION_STORAGE_KEYS } from "@/storageKeys";
+
+import { useEffect } from "react";
+
+import Link from "@/lib/Link";
 
 export default function HomePage() {
   useEffect(() => {
-    sessionStorage.setItem("quizAnswers", "{}");
+    sessionStorage.setItem(SESSION_STORAGE_KEYS.QUIZ_ANSWERS, "{}");
+    sessionStorage.setItem(SESSION_STORAGE_KEYS.WISHLIST, "{}");
   }, []);
 
   return (

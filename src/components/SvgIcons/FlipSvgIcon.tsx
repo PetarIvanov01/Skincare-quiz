@@ -1,4 +1,5 @@
 type Props = Readonly<React.SVGProps<SVGSVGElement>>;
+
 export default function FlipSvgIcon(props: Props) {
   return (
     <svg

@@ -22,6 +22,7 @@ export default function HearthSvgIcon(props: Props) {
     <HearthFillSvgIcon {...props} />
   );
 }
+
 function HearthFillSvgIcon(props: Props) {
   const { isLiked, ...rest } = props;
   return (
