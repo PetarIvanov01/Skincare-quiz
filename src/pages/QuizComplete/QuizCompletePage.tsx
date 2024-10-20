@@ -4,7 +4,8 @@ import { SESSION_STORAGE_KEYS } from "@/storageKeys";
 import type { UserInputs } from "@/utils/transformAnswersToUserInputs";
 
 import Link from "@/lib/Link";
-import ProductList from "@/components/ProductList/ProductList";
+
+import ProductsFetch from "@/components/ProductList/ProductsFetch";
 
 type Props = Readonly<{
   userInputs: UserInputs;
@@ -41,7 +42,7 @@ export default function QuizCompletePage({ userInputs }: Props) {
           </Link>
         </section>
       </div>
-      <ProductList userInputs={userInputs} />
+      <ProductsFetch userInputs={userInputs} />
     </main>
   );
 }
