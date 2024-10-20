@@ -1,0 +1,31 @@
+.loading {
+  background-color: #f6f6f6;
+  color: white;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+.skeletonCard {
+  margin-top: -4em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 80%;
+  height: 320px;
+  border-radius: 12px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
