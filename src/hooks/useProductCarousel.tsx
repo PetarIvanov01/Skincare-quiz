@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 export default function useProductCarousel(productsLength: number) {
   const [productIndex, setProductIndex] = useState(0);
   const [productsPerSlide, setProductsPerSlide] = useState<number>(1);
+  console.log(productsPerSlide);
 
   useEffect(() => {
     const handleSlidesChange = () => {
@@ -10,7 +11,7 @@ export default function useProductCarousel(productsLength: number) {
       let visibleItemsLength = 0;
       for (const child of carousel?.children || []) {
         const position = child.getBoundingClientRect();
-        if (window.innerWidth > position.right && visibleItemsLength <= 3) {
+        if (window.innerWidth > position.right && visibleItemsLength < 3) {
           visibleItemsLength++;
         }
       }
