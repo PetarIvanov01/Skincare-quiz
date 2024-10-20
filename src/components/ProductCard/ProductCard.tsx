@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import FlipSvgIcon from "../SvgIcons/FlipSvgIcon";
 import LikeSvgIcon from "../SvgIcons/LikeSvgIcon";
+import useOutsideClickToggle from "@/hooks/useOutsideClickToggle";
 
 type ProductCardProps = {
   isLiked: boolean;
@@ -28,6 +29,12 @@ export default function ProductCard({
 }: ProductCardProps) {
   const [flipCard, setFlipCard] = useState(false);
 
+  const { ref } = useOutsideClickToggle<HTMLDivElement>(handleClose);
+
+  function handleClose() {
+    setFlipCard(false);
+  }
+
   const handleFlipping = () => {
     setFlipCard((state) => !state);
   };
@@ -45,7 +52,12 @@ export default function ProductCard({
             onClick={() => handleWishlist(id)}
             className={styles.favoriteButton}
           />
-          <FlipSvgIcon onClick={handleFlipping} className={styles.flipButton} />
+          <div ref={ref}>
+            <FlipSvgIcon
+              onClick={handleFlipping}
+              className={styles.flipButton}
+            />
+          </div>
         </section>
         <section className={styles.titleAndPrice}>
           <h2 className={styles.cardTitle}>{title}</h2>
