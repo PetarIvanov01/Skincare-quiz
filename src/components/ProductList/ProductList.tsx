@@ -18,7 +18,6 @@ type Props = Readonly<{
 
 export default function ProductList({ suggestedProducts }: Props) {
   const productsLength = suggestedProducts.length;
-  console.log(productsLength);
 
   const {
     productIndex,
