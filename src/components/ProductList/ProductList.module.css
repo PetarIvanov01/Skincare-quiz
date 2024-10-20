@@ -1,0 +1,43 @@
+.productListWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+.productListInner {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  margin-top: -65px;
+  width: 100%;
+
+  max-width: 1120px;
+  min-height: 520px;
+
+  padding-bottom: 2em;
+  perspective: 1300px;
+}
+
+.productCarousel {
+  display: flex;
+  gap: 35px;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+@media (max-width: 1180px) {
+  .productListInner {
+    max-width: 735px;
+  }
+}
+
+@media (max-width: 970px) {
+  .productListInner {
+    max-width: 350px;
+  }
+}
