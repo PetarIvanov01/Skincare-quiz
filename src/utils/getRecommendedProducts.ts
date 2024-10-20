@@ -1,5 +1,9 @@
 import { stripHtml } from "string-strip-html";
+
 import type { UserInputs } from "./transformAnswersToUserInputs";
+
+import { SESSION_STORAGE_KEYS } from "@/storageKeys";
+import { trimText } from "./trimText";
 
 export interface FetchProducts {
   id: number;
@@ -10,10 +14,14 @@ export interface FetchProducts {
   variants: { price: string }[];
 }
 
-export function filterProducts(
+export function getRecommendedProducts(
   products: FetchProducts[],
   userInputs: UserInputs
 ) {
+  const wishlist = JSON.parse(
+    sessionStorage.getItem(SESSION_STORAGE_KEYS.WISHLIST) || "{}"
+  );
+
   return products
     .filter((product) => {
       return (
@@ -35,7 +43,19 @@ export function filterProducts(
       id: e.id,
       image: e.images[0].src,
       title: e.title,
-      description: stripHtml(e.body_html).result,
+      description: trimText(stripHtml(e.body_html).result),
       price: e.variants[0].price,
-    }));
+    }))
+    .sort((a, b) => {
+      const aInWishlist = Boolean(wishlist[a.id]);
+      const bInWishlist = Boolean(wishlist[b.id]);
+
+      if (aInWishlist && !bInWishlist) {
+        return -1;
+      }
+      if (!aInWishlist && bInWishlist) {
+        return 1;
+      }
+      return 0;
+    });
 }
